@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>My Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js“></script>
+    <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js”></script>
+
+    <!-- Custom styles for this template -->
+    <link href="my.css" rel="stylesheet"> 
+</head>
+
+<body class="text-center" >
+     <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="01_cover_page.html">Project overview</a></li>
+        <li role="presentation"><a href="02_Temperature.html">Temperature vs. Latitude</a></li>
+        <li role="presentation"><a href="03_Humidity.html">Humidity vs. Latitude</a></li>
+        <li role="presentation"><a href="04_Cloudiness.html">Cloudiness vs. Latitude</a></li>
+        <li role="presentation"><a href="05_Wind_Speed.html">Wind Speed vs. Latitude</a></li>
+        <li role="presentation"><a href="06_Comparison.html">Comparison</a></li>
+        <li role="presentation"><a href="07_Table.html">Data</a></li>
+    </ul>
+    
+    <h1 class="cover-heading">Distance from Equator and Weather Patterns</h1>
+    <div class = "row">
+        <img src = "Resources/assets/images/heat map with popups.png" alt = "Cities Sampled" width="960px" height="auto">
+    </div>
+
+    <div class = "row"></div>
+        <!-- Empty space on sides -->
+        <div class = "col-md-2"></div>
+
+        <!-- Paragraph content -->
+        <div class="col-md-3">  
+        <p justify ="left">The objective was to visualize the weather of 500+ cities across the world of varying distance from the equator.
+            So as to not schew results, the longitude and latidude were randomly selected for each observations, using 
+            values that spanned the entire globe. Since many locations are not cities, the name and location of the nearest city 
+            was identified using CityPy, a library with has a method for identifying the city closest to a location.
+            Subsequently, I performed a series of successive API calls to OpenWeather to pull the most recent weather.<br>
+            <br>
+            Because so much of the earth is covered in Ocean, quite often the closest cities turned out to be coastal, with many of them
+            far north or far south. Duplicates were quite common and were removed. <br>
+
+        </p>
+        </div>
+
+        <div class="col-md-3">  
+            <p justify ="left">To better understand where the data was coming from, I used Python gmaps to plot 
+                the location of the cities. I used a heatmap to asses if the cities were clustered. As one would 
+                expect a heatmap is hotter (more red) when lots of locations are clustered together and colder (greener) when
+                the locations are dispersed. I added popups to provide information about specific observations<br>
+                The cities in the map were predominantly coastal. However, it was still unclear if we ended up with 
+                distorted results simply because most of the population in the world lives in coastal areas. The final list of cities
+                was a plausible representation of cities worldwide. Perhaps the most important finding was 
+                that we had ample variation in longitudes, with cities at different distances both north and south of the equator.
+                <br>
+                
+            </p>
+        </div>
+        <div class = "col-md-2">
+            <p> 
+                <!-- <ul class="list-group">
+                    <li class = "li-plain">Map of weather locations</li>
+                    <li class = "li-plain">Temperature (F) vs. Latitude</li>
+                    <li class = "li-plain">Humidity (%) vs. Latitude</li>
+                    <li class = "li-plain">Cloudiness (%) vs. Latitude</li>
+                    <liclass = "li-plain">All Plots</li>
+                </ul> -->
+
+                <div class="list-group">
+                    <button type="button" class="list-group-item" href="02_Temperature.html">Temperature vs. Latitude</button>
+                    <button type="button" class="list-group-item" href="03_Humidity.html">Humidity vs. Latitude</button>
+                    <button type="button" class="list-group-item" href="04_Cloudiness.html">Cloudiness vs. Latitude</button>
+                    <button type="button" class="list-group-item" href="05_Wind_Speed.html">Wind speed vs. Longitude</button>
+                    <button type="button" class="list-group-item" href="06_Comparison.html">All plots</button>
+                </div> 
+                
+            </p>
+        </div>  
+    </div>    
+</body>
+
+</html>
